@@ -2,6 +2,15 @@
 
 Query a knowledge graph for drugs/diseases using LLM embedding
 
+Using linear algebra and a training set of (question, answer) pairs to predict answers for new queries.
+
+Evaluating on the test set, the score will be the quantile of order where the true answer was found (0=first match, 1=last match).
+A median of 0.017 means that the true answer is within the first 1.7% of the found answers.
+
+![KG QA performance](kg_qa_performance.png)
+
+
+
 **references:**
 
 databases:
