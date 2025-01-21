@@ -42,11 +42,16 @@ python3 -m pip install --upgrade pandas pyarrow
 python3 -m pip install --upgrade sentence-transformers
 
 pip install ipykernel
-python -m ipykernel install --user --name=kg
+python -m ipykernel install --user --name kg
 jupyter kernelspec list
 
 python3 -m pip install --upgrade jupyter ipywidgets
+```
 
+Then you can start the jupyter notebook / lab.
+```
+cd <path of repo>
+# jupyter lab
 jupyter notebook
 ```
 
