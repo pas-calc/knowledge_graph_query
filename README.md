@@ -63,7 +63,7 @@ wget -O stark_qa.csv https://stark.stanford.edu/data/primekg/stark_qa.csv
 The knowledge graph is an [undirected graph]([https://link-url-here.org](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics))) containing all the edges (8100498/2 = 4050249 relationships) including node information about head/tail, so that the graph can be reconstructed. Edges are equipped with a "relationship" information.
 There are 129375 nodes (vertices) of the graph, equipped with name, type, source and an id that refers to the source data (allows lookup for more information, enrichment of the nodes).
 
-The QA database contains 11246 question/answer pairs. Answer ids are a list containing ids referring to the node id of the knowledge graph.
+The QA database contains 11204 question/answer pairs. Answer ids are a list containing ids referring to the node id of the knowledge graph.
 
 Data headers:
 ```
