@@ -53,9 +53,31 @@ jupyter notebook
 
 ## dataset: knowledge graph
 
-download the knowledge graph (PrimeKG) and QA data (stark_qa)
+Download the knowledge graph (PrimeKG) and QA data (stark_qa).
 
 ```
 wget -O kg.csv https://dataverse.harvard.edu/api/access/datafile/6180620
 wget -O stark_qa.csv https://stark.stanford.edu/data/primekg/stark_qa.csv
+```
+
+The knowledge graph is an [undirected graph]([https://link-url-here.org](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics))) containing all the edges (8100498/2 = 4050249 relationships) including node information about head/tail, so that the graph can be reconstructed. Edges are equipped with a "relationship" information.
+There are 129375 nodes (vertices) of the graph, equipped with name, type, source and an id that refers to the source data (allows lookup for more information, enrichment of the nodes).
+
+The QA database contains 11246 question/answer pairs. Answer ids are a list containing ids referring to the node id of the knowledge graph.
+
+Data headers:
+```
+$ head -n1 *.csv
+==> kg.csv <==
+relation,display_relation,x_index,x_id,x_type,x_name,x_source,y_index,y_id,y_type,y_name,y_source
+
+==> stark_qa.csv <==
+id,query,answer_ids
+```
+
+Data checksums:
+```
+$ md5sum *.csv
+aac8191d4fbc5bf09cdf8c3c78b4e75f  kg.csv
+8321f21eba03a724ed2321d37bb7c0d2  stark_qa.csv
 ```
